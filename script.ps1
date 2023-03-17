@@ -6,4 +6,4 @@ git init
 git remote add origin $url
 git pull origin master
 
-# robocopy "C:\psprofile\Microsoft.PowerShell_profile.ps1" "C:\Users\Louis\Documents\WindowsPowerShell" /xj /tee /np /r:0 /w:0
+robocopy "C:\psprofile" "C:\Users\Louis\Documents\WindowsPowerShell" /xj /tee /np /r:0 /w:0
