@@ -7,3 +7,7 @@ git remote add origin $url
 git pull origin master
 
 robocopy "C:\psprofile" "C:\Users\Louis\Documents\WindowsPowerShell" /xj /tee /np /r:0 /w:0
+
+set-location -Path "C:\"
+
+Remove-Item -Path "C:\psprofile" -force
