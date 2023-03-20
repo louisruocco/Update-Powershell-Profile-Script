@@ -9,8 +9,8 @@ git pull origin master
 
 robocopy "C:\psprofile" "C:\Users\*\Documents\WindowsPowerShell" /xj /tee /np /r:0 /w:0
 
-set-location -Path "C:\"
+set-location C:\
 
 Remove-Item -Path "C:\psprofile" -force
 
-return
+start-process powershell.exe
