@@ -13,4 +13,8 @@ set-location C:\
 
 Remove-Item -Path "C:\psprofile" -force
 
+write-host "Profile updated successfully!"
+
+start-sleep 2
+
 start-process powershell.exe
