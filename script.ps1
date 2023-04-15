@@ -1,20 +1,21 @@
 $url = "https://github.com/louisruocco/Powershell-Profile"
 
-New-Item -Path "C:\psprofile" -Type Directory
-Set-Location -Path "C:\psprofile"
+New-Item -Path "C:\Documents\psprofile" -Type Directory
+Set-Location -Path "C:\Documents\psprofile"
 
 git init
 git remote add origin $url
 git pull origin master
 
-robocopy "C:\psprofile" "C:\Users\Louis\Documents\WindowsPowerShell" /xj /tee /np /r:0 /w:0
+robocopy "C:\Documents\psprofile" "C:\Users\*\Documents\WindowsPowerShell" /xj /tee /np /r:0 /w:0
 
-set-location -Path "C:\"
+set-location C:\
 
-Remove-Item -Path "C:\psprofile" -force
+Remove-Item -Path "C:\Documents\psprofile" -force
+Remove-Item "C:\Documents\updatepsprofile"
 
-write-host "Updated profile successfully!"
+write-host "Profile updated successfully!"
 
 start-sleep 2
 
-exit
+start-process powershell.exe
