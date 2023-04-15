@@ -13,4 +13,8 @@ set-location -Path "C:\"
 
 Remove-Item -Path "C:\psprofile" -force
 
-return
+write-host "Updated profile successfully!"
+
+start-sleep 2
+
+exit
