@@ -15,3 +15,5 @@ Remove-Item -Path "C:\Documents\psprofile" -force
 Remove-Item "C:\Documents\updatepsprofile"
 
 write-host "Profile updated successfully!"
+
+pause
