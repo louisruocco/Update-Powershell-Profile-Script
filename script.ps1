@@ -12,8 +12,7 @@ robocopy "C:\Documents\psprofile" "C:\Users\*\Documents\WindowsPowerShell" /xj /
 set-location C:\
 
 Remove-Item -Path "C:\Documents\psprofile" -force
-Get-ChildItem "C:\Documents\updatepsprofile" -recurse | Remove-Item "C:\Documents\updatepsprofile"
-
+remove-item -Path "C:\Documents\updatepsprofile" -force
 write-host "Profile updated successfully!"
 
 pause
