@@ -5,12 +5,15 @@ Set-Location -Path "C:\psprofile"
 
 git init
 git remote add origin $url
-git clone $url
+git pull origin master
 
-robocopy "C:\psprofile" "C:\Users\*\Documents\WindowsPowerShell" /xj /tee /np /r:0 /w:0
+robocopy "C:\psprofile" "$home\Documents\WindowsPowerShell" /xj /tee /np /r:0 /w:0
 
-set-location C:\
+set-location $home
 
-write-host "Profile updated successfully!"
+Remove-Item -Path "C:\psprofile" -force
 
-pause
+write-host "Profile Updated!"
+start-sleep 2
+
+start-process powershell.exe
